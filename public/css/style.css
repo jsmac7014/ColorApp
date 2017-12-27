@@ -1,0 +1,233 @@
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+}
+
+.container {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 15px;
+    margin: 10px;
+}
+
+.custom-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.content p {
+    margin: 2px;
+}
+
+button, html [type=button] {
+    -webkit-appearance: none;
+}
+
+#toast {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    background: black;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.3s, fadeout 0.3s 2s;
+}
+
+#notice {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* make */
+
+
+.noti{
+  width: 300px;
+  height: 55px;
+  margin-bottom: 50px;
+  background-color:white;
+  text-align: center;
+}
+
+.color-card {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+#palette {
+    background-color: #36afff;
+    overflow: hidden;
+}
+.make.container{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#palette p {
+    font-size: 2.2em;
+    color: #36afff;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+input{
+  margin: 10px;
+}
+#colorInput {
+    border: none;
+    outline: none;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+}
+
+#nameInput {
+    border: none;
+    outline: none;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+}
+
+
+#colorBtn{
+  margin: 30px;
+}
+#colorBtn:hover {
+    color: #36afff;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #DDD;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #DDD;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #DDD;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #DDD;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container {
+        top: 30px;
+    }
+    #notice {
+        top: 20px;
+    }
+    .custom-card {
+        width: 100px;
+        height: 100px;
+    }
+    #colorBtn{
+        display: block!important;
+        width: 100%!important;
+    }
+}

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <%include ./layout/head %>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Share Your Color!</title>
+</head>
+
+<body id="palette">
+    <div class="make container">
+        <div class="noti">
+            <p>'#' is Not Required</p>
+        </div>
+        <form method="post">
+            <input type="text" id="nameInput" placeholder="Color Name" name="nameInput" autocomplete="off" required>
+            <input type="text" id="colorInput" placeholder="Color Code" name="colorInput" autocomplete="off" required>
+            <button type="submit" id="colorBtn" name="colorBtn" class="btn btn-outline-light">Add!</button>
+        </form>
+    </div>
+    <script>
+        window.onload = function() {
+            var palette = document.getElementById('palette');
+            var input = document.getElementById('colorInput');
+            // palette.style.backgroundColor
+            input.addEventListener('keyup', function() {
+                console.log(input.value);
+                palette.style.backgroundColor = input.value;
+            });
+        }
+    </script>
+</body>
+
+</html>
