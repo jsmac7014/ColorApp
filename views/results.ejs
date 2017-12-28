@@ -2,18 +2,13 @@
 <html>
 
 <head>
-        <%include ./layout/head%>
-        <title>ColorApp</title>
+        <% include ./layout/head %>
+        <title>Seacrh Results</title>
 </head>
 
 <body>
     <!-- <%include ./layout/nav%> -->
     <!-- <h1 id="notice">Click The Color</h1> -->
-    <div class="search">
-        <form method="post" >
-            <input type="text" name="searchbar" id="searchbar" placeholder="Search" autocomplete="off">
-        </form>
-    </div>
     <div class="container" id="container">
         <% data.forEach((item) => { %>
             <div class="card">
@@ -29,10 +24,9 @@
             </div>
             <% }); %>
     </div>
-    <a href="/make" id="addBtn"><i class="material-icons">add</i></a>
     <div id="toast" class=""></div>
 
-    <script src="./js/clipboard.min.js"></script>
+    <script src="/js/clipboard.min.js"></script>
     <script>
         window.onload = function() {
             var card = document.body.querySelectorAll('div.card');

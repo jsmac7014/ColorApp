@@ -20,6 +20,25 @@ router.get('/', (req, res) => {
         res.render('list', {data: results});
     });
 });
+router.post('/',(req,res)=>{
+  var search = req.body.searchbar;
+  res.redirect('/results/' + search);
+});
+
+router.get('/results/:word',(req,res)=>{
+    var search = req.params.word;
+    const sql = `SELECT * FROM ColorInfo WHERE name = '${search}'`;
+    connection.query(sql, (err,results)=>{
+        if(err){
+          console.log(err);
+        }
+        else{
+          console.log('Worked');
+          res.render('results',{data: results});
+        }
+    });
+});
+
 
 router.get('/make', (req, res) => {
     res.render('make', {});
