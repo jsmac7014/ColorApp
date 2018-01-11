@@ -29,28 +29,27 @@
     <script src="/js/clipboard.min.js"></script>
     <script>
         window.onload = function() {
-            var card = document.body.querySelectorAll('div.card');
-            var color = document.body.querySelectorAll('div.custom-card');
-            var colorName = document.body.querySelectorAll('p.colorName');
-            var colorCode = document.body.querySelectorAll('p.colorCode');
+            var card = document.body.querySelectorAll("div.card");
+            var color = document.body.querySelectorAll("div.custom-card");
+            var colorName = document.body.querySelectorAll("p.colorName");
+            var colorCode = document.body.querySelectorAll("p.colorCode");
 
             function showToast(text) {
-                var toast = document.getElementById('toast');
+                var toast = document.getElementById("toast");
                 toast.className = "show";
                 toast.innerHTML = "Copied" + " " + text;
                 setTimeout(function() {
-                    toast.className = toast.className.replace('show', "");
+                    toast.className = toast.className.replace("show", "");
                 }, 2000);
             }
-
-
+            
             for (var i = 0; i < card.length; i++) {
-                card[i].addEventListener('click', function(e) {
-                    var code = e.target.parentNode.querySelectorAll('p.colorCode')[0].textContent;
+                card[i].addEventListener("click", function(e) {
+                    var code = e.target.parentNode.querySelectorAll("p.colorCode")[0].textContent;
                     console.log(code);
-                    var clipboard = new Clipboard('div.card', {
+                    var clipboard = new Clipboard("div.card", {
                         text: function() {
-                            return e.target.parentNode.querySelectorAll('p.colorCode')[0].textContent;
+                            return e.target.parentNode.querySelectorAll("p.colorCode")[0].textContent;
                         }
                     });
                     showToast(code);
