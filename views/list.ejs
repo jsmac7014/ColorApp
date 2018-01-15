@@ -7,8 +7,6 @@
 </head>
 
 <body>
-    <!-- <%include ./layout/nav%> -->
-    <!-- <h1 id="notice">Click The Color</h1> -->
     <div class="search">
         <form method="post" >
             <input type="text" name="searchbar" id="searchbar" placeholder="Search" autocomplete="off">
@@ -34,9 +32,6 @@
     <script>
       window.onload = function() {
           var card = document.body.querySelectorAll("div.card");
-          var color = document.body.querySelectorAll("div.custom-card");
-          var colorName = document.body.querySelectorAll("p.colorName");
-          var colorCode = document.body.querySelectorAll("p.colorCode");
 
           function showToast(text) {
               var toast = document.getElementById("toast");
